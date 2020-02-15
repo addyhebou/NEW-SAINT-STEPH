@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes load{
+    from {width: 0px;}
+    to {width: 40px;}
+}
+
+@keyframes out{
+    from {width: 0px;}
+    to {width: 40px;}
+}
+
+body{
+    transition: all 0.5s;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    /* background: red; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* border: 2px solid black; */
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+/* #grayBox{
+    z-index: -2;
+    background-color: #262626;
+    background-color: white;
+    top: 25px;
+    position: absolute;
+    height: 30px;
+    width: 50px;
+    border-radius: 20%;
+}  */
+
+.icons{padding-top: 20px;}
+
+.loadList{
+    background-color: rgb(219, 142, 53);
+    width: 0px;
+    height: 5px;
+    animation-duration: 0.5s;
+    animation-name: none;
+    position: absolute;
+    -webkit-transition: 0.5s;
+}
+
+#logo{
+    padding-top: 0px;
+    padding-left: 130px;
+    padding-right: 130px;
+}
+
+#logo img{
+    transition: all 0.5s;
+}
+
+#logo img:hover{
+    transform: scale(1.2);
+}
+
+
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    list-style-type: none;
+    padding-left: 70px;
+}
+
+.menuItem{
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.menuItem:hover .loadList{
+    animation-name: load;
+    width: 40px;
+}
+
+.menu li{
+    padding: 10px; 
+    font-family: Selena;
+    padding-top: 20px;
+}
+.menu li img{width: 100px;}
+
+#moon{
+    position: relative;
+    left: 160px;
+}
+
+.purp{
+    background-color: rgb(224, 127, 224);
+}
+
+.social{
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 60px;
+    justify-content: space-around;
+    transition: all 0.5s;
+}
+
+.social:hover{opacity: 0.5; transform: scale(1.1);}
+
+#title{
+    color: white;
+}

@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face{
+    font-family: Selena;
+    src: url(Fonts/Selena.ttf);
+}
+
+a{
+    text-decoration: none;
+    text-decoration-style: none;
+}
+
+#appleholder{
+    text-align: center;
+    display: flex;
+}
+
+#beatstarsholder{
+    text-align: center;
+    overflow: hidden;
+}
+
+.contentHolder{
+    padding:70px;
+}
+
+h1{
+    font-family: Selena;
+    text-align: center;
+    font-weight: normal;
+    padding: 30px;
+}
+
+li{
+    /* background-color: #262626; */
+    /* background: linear-gradient(to bottom, #262626 0%,#262626 50%,#262626 50%,black 50%,black 100%);
+    border-radius: 10%; */
+}
+
+#scholder{
+    text-align: center;
+    overflow: hidden;
+    height: 300px;
+    width: 500px;
+}
+
+#title{
+    position: absolute;
+    font-size: 90px;
+    font-family: Selena;
+    top: 70%;
+    transition: all 0.5s;
+}
+
+#titleHolder{
+    height: 525px;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Media/Me\ Playing\ Synth\ .mp4');
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: 50% 50%;
+} 
+
+

@@ -1,0 +1,189 @@
+To MIPS assembly:
+
+a = b + c - d * e
+
+a = 0x40001000
+b = 0x10014cc
+c = address is in $t0
+d = address is in $t1
+e = calue is in $t2
+
+lui $t3, 0x4000
+ori $t3, $t3, 0x1000
+lui $t4, 0x100
+ori $t4, $t4, 0x14cc
+
+lw $t5, 0($t4)
+lw $t6, 0($t0)
+lw $t7, 0($t1)
+
+
+add $t8, $t5, $t6
+mult $t7, $t2
+mflo $t9
+sub $t8, $t8, $t9
+sw $t8, 0($t3)
+
+_____________________________
+
+lw $t0, 4($t1)
+lw $t0, 12($t1)
+
+____________________________
+
+address of 'h' is in $t1
+value we want will be stored in $t0
+
+lw $t0, 16($t1)
+____________________________
+
+
+starting addr is Ox1000100c
+
+lui $t0, 0x1000
+ori $t0, $t0, 0x100c
+
+li $t1, 2
+li $t2, 3
+li $t3, 4
+li $t4, 5
+li $t5, 8
+
+sw $t1, 0($t0)
+sw $t2, 4($t0)
+sw $t3, 4($t0)
+sw $t1, 4($t0)
+sw $t1, 4($t0)
+sw $t3, 4($t0)
+sw $t4, 4($t0)
+sw $t5, 4($t0)
+sw $t1, 4($t0)
+sw $t2, 4($t0)
+____________________________
+
+2 3 4 4
+4 3 3 3
+
+first address is at 0x100444c
+
+
+lui $t0, 0x100
+ori $t0, $t0, 0x444c
+
+li $ti, 2
+li $t2, 3
+li $t3, 4
+
+sw $t1, 0($t0)
+sw $t2, 4($t0)
+sw $t3, 8($t0)
+sw $t3, 12($t0)
+sw $t3, 16$t0)
+sw $t2, 20($t0)
+sw $t2, 24($t0)
+sw $t2, 28
+
+____________________________($t0)
+
+
+
+Convert to machine code:
+
+sw $t3, 12($2)
+
+
+answer:
+op 101011
+rs 01010
+rt 01011
+imm 0000000000001100
+
+
+
+number 13
+
+little endian
+first 1011 last
+last 1101 first
+
+little endian
+0x67AB402c
+low memory address             67 AB 50 2C         higher memory address
+
+____________________________
+
+if (a < 2){
+    b = 3;
+}
+else{
+    b = 5;
+}
+
+
+assume: 
+'a' is at $t0
+'b' is at $t1
+
+li $t2, 2
+
+blt $t0, $t2, body_of_if
+li $tl, 5
+j endian
+
+body_of_if:
+    li $t1, 3
+
+end:
+____________________________
+____________________________
+
+    li $t2, 2
+    bge $t0, $t2, else
+    li $t1, 3
+    j end
+
+else: 
+    li $t1, 5   
+
+end:
+
+
+question:
+if (a >= 3){
+    a = b * c;
+    b = c - 1;
+
+}
+
+else if (a == 0){
+    a = b / c;
+    b = c;
+}
+
+else{
+    a++;
+}
+
+answer:
+    assum a is at $t0, b is at $t1, c is at $t2
+
+    li $t3, 3
+
+    blt $t0, $t3, else_if
+    mult $t1, $t2
+    mflo $t0
+    j end
+
+else_if:
+    beq 0, $zero, else
+    div $t1, $t2
+    mflo $t0
+    addi $t1, $t2, 0
+    j end
+
+
+else:
+    addi $t0, $t0, 1
+
+
+

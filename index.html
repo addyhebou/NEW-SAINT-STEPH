@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Saint Steph | Official Site</title>
+    <link rel = "stylesheet" href = "header.css">
+    <link rel = "stylesheet" href = "main.css">
+    <script src="https://kit.fontawesome.com/c5d1036b50.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="titleCard.js"></script>
+</head>
+<body class = "body" id = "bckgrnd" onload = "setInterval(changeTitle, 1000)">
+    <header>
+        <div class = "container">
+            <div class = "icons">
+                <i class="fab fa-instagram social"></i>
+                <i class="fab fa-twitter social"></i>
+                <i class="fab fa-facebook-f social"></i>
+                <i class="fab fa-youtube social"></i>
+                <i class="fab fa-spotify social"></i>
+                <i class="fab fa-apple social"></i>
+            </div>
+            <div class = "menu">
+                <li class = "menuItem" id = "item">
+                    <div id = "grayBox"></div>
+                    <p>Music</p>
+                    <div class = "loadList"></div>
+                </li>
+                <li class = "menuItem" id = "item"><p>Beats</p>
+                    <div class = "loadList purp"></div>
+                </li>
+                    <li class = "menuItem" id = "item"><p>Media</p>
+                    <div class = "loadList"></div>
+                </li>
+                <li id = "logo"><img src = "icons/Saint Steph Logo SUNSET TRANSPARENT.png"></li>
+                <li class = "menuItem" id = "item"><p>Bio</p>
+                    <div class = "loadList purp"></div>
+                </li>
+                <li class = "menuItem" id = "item"><p>Licenses</p>
+                    <div class = "loadList"></div>
+                </li>
+                <li class = "menuItem" id = "item"><p>Contact</p>
+                    <div class = "loadList purp"></div>
+                </li>
+                <li class = "menuItem" id = "item"><p>Addy</p>
+                    <div class = "loadList"></div>
+                </li>
+            </div>
+            <div class = "icons">
+                <i id = "moon" class="fas fa-moon social moon" onmouseover = "shiftColors()" onmouseout="shiftColors()" onclick = "shiftColors()"></i>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id = "titleHolder">
+            <div id = "title"></div>
+        </div>
+        <h1>Music</h1>
+        <div id = "appleholder">
+            <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/saint-steph-behind-the-boards/pl.u-DdANrX5T0GdX0o"></iframe>
+            <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/565729350&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+        </div>
+        <a style = "text-align: center;" "https://geo.music.apple.com/us/playlist/saint-steph-behind-the-boards/pl.u-DdANrX5T0GdX0o?mt=1&app=music" style="display:inline-block;overflow:hidden;background:url(https://tools.applemusic.com/en-us/badge-lrg.svg?kind=playlist&bubble=apple_music) no-repeat;width:158px;height:45px;"></a>
+        <h1 id = "beats">Beats</h1>
+        <div class = "contentHolder">
+            <div id = "beatstarsholder">
+                <iframe style = "width: 70%" src="https://player.beatstars.com/?storeId=104066" width="100%" height="800" style="max-width:1024px;"> -- none -- </iframe>
+            </div>
+        </div>
+        <div class = "contentHolder">
+            <h1>Bio</h1>
+            <caption>This biography is exclusively the musical portion of Saint
+                Steph
+            </caption>
+            <p>Known by his stage name Saint Steph, Addy Stephane Hebou
+                arrived to the world in December of 2000. 
+            </p>
+        </div>
+    </main>
+</body> 
+<script src = "nightMode.js"></script>
+</html>
